@@ -1,12 +1,13 @@
 {
   "name": "secure-notes",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple and secure notes application with XSS protection",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["notes", "express", "security", "xss-protection"],
   "author": "",
   "license": "ISC",
   "dependencies": {

@@ -6,40 +6,82 @@
   <link rel="stylesheet" href="/style.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 1rem;
-      line-height: 1.5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 650px;
+      margin: 3rem auto;
+      padding: 2rem;
+      line-height: 1.6;
+      background: #fafafa;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #1a1a1a;
+    }
+
+    form {
+      margin-bottom: 2.5rem;
     }
 
     textarea {
       width: 100%;
-      height: 80px;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      font-family: monospace;
+      height: 100px;
+      padding: 0.875rem;
+      margin-bottom: 0.75rem;
+      font-family: 'SF Mono', Consolas, monospace;
+      font-size: 0.95rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      resize: vertical;
+      transition: border-color 0.2s;
+      background: white;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #4a90e2;
     }
 
     ul {
       list-style-type: none;
       padding: 0;
+      margin-top: 1rem;
     }
 
     li {
-      background: #f5f5f5;
-      margin-bottom: 0.5rem;
-      padding: 0.5rem;
-      border-radius: 5px;
-      font-family: monospace; /* show text clearly */
-      white-space: pre-wrap; /* preserves line breaks */
-      word-break: break-word; /* prevents overflow */
+      background: white;
+      margin-bottom: 0.75rem;
+      padding: 1rem;
+      border-radius: 8px;
+      font-family: 'SF Mono', Consolas, monospace;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border-left: 3px solid #4a90e2;
     }
 
     button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
       cursor: pointer;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #357abd;
+    }
+
+    button:active {
+      transform: translateY(1px);
     }
   </style>
 </head>
@@ -55,4 +97,10 @@
     <% if (notes.length === 0) { %>
       <li>No notes yet.</li>
     <% } else { %>
-      <% note
+      <% notes.forEach(note => { %>
+        <li><%= note %></li>
+      <% }); %>
+    <% } %>
+  </ul>
+</body>
+</html>
