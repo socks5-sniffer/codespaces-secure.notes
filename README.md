@@ -46,4 +46,3 @@ npm install
 npm start
 
 
-Open your browser at http://localhost:3000 to add and view notes. Any attempts to insert scripts or HTML tags will be safely escaped.

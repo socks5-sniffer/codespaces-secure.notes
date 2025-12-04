@@ -1,3 +1,5 @@
+Note: This is a demonstration project focused on XSS prevention. Authentication is intentionally omitted to keep the example focused and simple. In a production environment, you would want to add user authentication and store notes in a database.
+
 # Secure Notes App
 
 A simple notes application built with Node.js, Express, and EJS that focuses on security and safe user input handling.
